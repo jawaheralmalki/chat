@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flash_chat/welcomescreen.dart';
+import 'package:flash_chat/loginscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,10 +19,10 @@ class MyApp extends StatelessWidget {
           bodyLarge: TextStyle(color: Colors.amber),
         ),
       ),
-      initialRoute: 'Welcome_Screen',
+      initialRoute: LoginScreen.id,
       routes: {
         'Welcome_Screen': (context) => WelcomeScreen(),
-        //  'Login_Screen':(context) => LoginScreen(),
+        'Login_Screen': (context) => LoginScreen(),
         //  'Registration_Screen':(context) => RegistrationScreen(),
         //  'chat_Screen' :(context) => ChatScreen(),
       },
