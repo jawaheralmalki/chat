@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flash_chat/welcomescreen.dart';
 import 'package:flash_chat/loginscreen.dart';
+import 'package:flash_chat/registrationscreen.dart';
+import 'package:flash_chat/chatscreen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,17 +16,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData.dark().copyWith(
-        textTheme: TextTheme(
+      theme: ThemeData(
+        textTheme: const TextTheme(
           bodyLarge: TextStyle(color: Colors.amber),
         ),
       ),
-      initialRoute: LoginScreen.id,
+      initialRoute: ChatScreen.id,
       routes: {
-        'Welcome_Screen': (context) => WelcomeScreen(),
-        'Login_Screen': (context) => LoginScreen(),
-        //  'Registration_Screen':(context) => RegistrationScreen(),
-        //  'chat_Screen' :(context) => ChatScreen(),
+        WelcomeScreen.id: (context) => WelcomeScreen(),
+        LoginScreen.id: (context) => LoginScreen(),
+        RegistrationScreen.id: (context) => RegistrationScreen(),
+        ChatScreen.id: (context) => ChatScreen(),
       },
     );
   }
